@@ -10,7 +10,17 @@ module HelloRailsBackEnd
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
-
+    Rails.application.config.middleware.insert_before 0, Rack::Cors do
+      allow do
+        origins 'http://127.0.0.1:3001' # Replace with the actual URL of your React frontend
+    
+        resource '/api/random_greeting',
+          headers: :any,
+          methods: [:get, :post, :put, :patch, :delete, :options, :head],
+          credentials: true
+      end
+    end
+    
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files
