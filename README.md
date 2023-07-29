@@ -18,7 +18,7 @@
 
 # 📖 Rails React Starter <a name="about-project"></a>
 
-## [Hello React Front End]()
+## [Hello React Front End](https://github.com/edubew/hello_react_frontend)
 
 It is a simple web application demonstrating use of React with Rails.
 
